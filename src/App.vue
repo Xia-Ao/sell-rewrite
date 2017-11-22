@@ -41,19 +41,17 @@
     },
     created () {
       // GET /someUrl
-      this.$http.get('/api/seller?id='+this.seller.id).then(response => {
+      this.$http.get('static/data.json').then(response => {
         // success callback
-        response = response.body;
-
-        console.dir(response);
-        console.dir(response.errno);
+//        response = response.body;
+          let sellerData= response.body.seller;
 
 
-        if (response.errno === ERR_OK) {
+//        if (response.errno === ERR_OK) {
 //          this.seller = response.data;
-          this.seller= Object.assign({},this.seller, response.data);
+          this.seller= Object.assign({}, sellerData);
           console.log(this.seller);
-        }
+//        }
       }, response => {
         // error callback
       });

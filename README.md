@@ -35,4 +35,4 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 1、参照ustbhuangyi的源码[Demo](https://github.com/ustbhuangyi/vue-sell)，使用vue-cli脚手架手架工具搭建项目，app主要分为seller、foods、ratings三部分，采用ES6和stylus语法编写。
 
-
+2017.6

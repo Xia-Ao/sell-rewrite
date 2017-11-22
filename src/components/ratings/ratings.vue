@@ -83,10 +83,10 @@
       };
     },
     created() {
-      this.$http.get('./api/ratings').then((response) => {
-        response = response.body;
-        if (response.errno === ERR_OK) {
-          this.ratings = response.data;
+      this.$http.get('static/data.json').then((response) => {
+        let ratingsData = response.body.ratings;
+//        if (response.errno === ERR_OK) {
+          this.ratings = ratingsData;
 //          console.log(this.ratings);
 
 //        better-scroll 滚动
@@ -99,7 +99,7 @@
               this.scroll.refresh();
             }
           });
-        }
+//        }
       });
     },
     methods: {

@@ -98,17 +98,17 @@
     created () {
       this.classMap = ['decrease', 'discount', 'guarantee', 'invoice', 'special'];
       // GET /someUrl
-      this.$http.get('/api/goods').then(response => {
+      this.$http.get('static/data.json').then(response => {
         // success callback
-        response = response.body;
-        if (response.errno === ERR_OK) {
-          this.goods = response.data;
+        let goodData = response.body.goods;
+//        if (response.errno === ERR_OK) {
+          this.goods = goodData;
           console.log(this.goods);
           this.$nextTick(() => {
             this._initScroll();
             this._calculateHeight();
           });
-        }
+//        }
       }, response => {
         // error callback
       });
