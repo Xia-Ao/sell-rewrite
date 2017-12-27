@@ -10,6 +10,19 @@ import seller from './components/seller/seller.vue';
 
 import './common/stylus/index.styl';
 
+// randomName.f2();
+// randomName.f3();
+import {default as randomName} from './module/test1'
+console.log(randomName)
+let a=1
+if (a) {
+  import('./module/test2').then(dj => {
+    console.log(dj.age)
+  }).catch(() => {
+  alert('error')
+  })
+}
+
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
